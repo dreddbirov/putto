@@ -9,59 +9,42 @@ font-family: 'Parisienne', cursive;
 font-family: 'Press Start 2P', cursive;
 font-family: 'Vibur', cursive;
 */
-body {
-  /*background: rgb(105, 118, 212);
-  background: linear-gradient(270deg, rgba(105, 118, 212, 0) 72.7%, rgba(98, 136, 175, 1) 71.2%);
-  background-repeat: no-repeat;*/
-}
+/*
+font-family: 'Mulish', sans-serif;
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
 
 #row1 {
-  height: 650px;
+  height: 640px;
   width: 1300px;
-  /*  background-image: url("images/kovacs-p960x640.jpg");
-  background-repeat: no-repeat;
-  background-position: right top;*/
   position: absolute;
 }
 
-.col2 {
-  background: /*url("images/kovacs-p960x640.jpg"),*/
-    linear-gradient(rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0.8)),
-      url("images/kovacs-p960x640.jpg");
-  background-repeat: no-repeat;
-  /*background-position: right top;
-  */
-  /*display: block;*/
-  position: relative;
-}
-
-/*.col2::after {
-   background-color: rgba(0, 0, 0, 0.2);
-   z-index: 2;
-   position: absolute;
-}*/
-
-/*.col2>.c-p2) {
-  opacity: 1;
-}*/
 #col1 {
   background-color: rgb(105, 118, 212);
 }
 
-.btn-c, .p2 {
+#col2 {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.8)),
+    url("images/kovacs-p960x640.jpg");
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.btn-c {
   padding: 25px 0;
 }
 
-/*.container {
-  width: 350px;
-  height: 730px;
-  background: rgb(105, 118, 212);
-  position: absolute;
-  padding: 30px 0 20px 0px;
-}*/
+.p2 {
+  padding-top: 25px;
+}
+
 h1 {
-  padding: 90px 0 0;
+  padding: 70px 0 20px;
   font-family: 'Monoton', cursive;
   font-size: 4rem;
   color: #2C003E;
@@ -73,28 +56,22 @@ h1 {
   color: #2C003E;
 }
 
-.btn {
-  /*/display: inline-block;*/
-}
-
 .p2 {
   text-align: left;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.3rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 550;
+  font-size: 2.8rem;
   padding-left: 200px;
-  text-indent: 5rem;
   color: #595238;
-  /*z-index: -1;*/
-}
-
-#otosL {
-  text-indent: 50px;
 }
 
 .c-p2 {
-  padding-top: 250px;
-  /*position: absolute;*/
-  /*background-image: url("images/kovacs-p960x640.jpg");
-  background-repeat: no-repeat;
-  background-position: right top;*/
+  padding-top: 280px;
+  height: 630px;
+}
+
+.ol {
+  opacity: 1;
+  background-color: rgb(255,182,193);
+  color: white;
 }
