@@ -1,32 +1,42 @@
-function euroJackpot () {
-  var n1 = Math.floor(Math.random() * 50)+1;
-  var n2 = Math.floor(Math.random() * 50)+1;
-  var n3 = Math.floor(Math.random() * 50)+1;
-  var n4 = Math.floor(Math.random() * 50)+1;
-  var n5 = Math.floor(Math.random() * 50)+1;
-  var n10 = Math.floor(Math.random() * 10)+1;
-  var n11 = Math.floor(Math.random() * 10)+1;
-return alert(n1 + " " + n2 + " " + n3 + " " + n4 + " " + n5 + "   " + n10 + " " + n11);
+//eurojackpot
+document.getElementById("ej").addEventListener("click", function() {
+  document.getElementById("euroJP").innerHTML = euroJackpot();
+});
+
+function euroJackpot() {
+  var n1 = 5;
+  var n2 = 2;
+  ej1 = [];
+  ej2 = [];
+
+  for (i = 0; i < n1; i++) {
+    var a = Math.floor(Math.random() * 50) + 1;
+    if (ej1.includes(a)) {
+      n1++;
+    } else {
+      ej1.push(a);
+    }
+  }
+
+  for (i = 0; i < n2; i++) {
+    var b = Math.floor(Math.random() * 10) + 1;
+    if (ej2.includes(b)) {
+      n2++
+    } else {
+      ej2.push(b);
+    }
+  }
+  console.log(ej1 + "\xa0" + ej2);
+  return ej1[0] + "\xa0\xa0" + ej1[1] + "\xa0\xa0" + ej1[2] + "\xa0\xa0" + ej1[3] + "\xa0\xa0" + ej1[4] + "\xa0\xa0\xa0\xa0\xa0" + ej2[0] + "\xa0\xa0" + ej2[1];
 }
-//euroJackpot();
 
-document.getElementById("ol").addEventListener("click", function(){
-
-//otosLotto();
-document.getElementById("otosL").innerHTML = document.getElementById("otosL").style.textIndent = "50px";
-var otosL = document.getElementById("otosL");//.style.textIndent = "50px";
-//var otosL.innerHTML = otosL.style.textIndent("50px");
-otosL.innerHTML = otosL.innerHTML.replace(otosL.innerHTML, otosLotto());
-document.getElementById("otosL").style.textIndent = "50px";
-
-//var text = document.createTextNode(otosLotto());
-//otosL.appendChild(text);
-//document.getElementById("ol").disabled = true;
-
+//ötöslottó
+document.getElementById("ol").addEventListener("click", function() {
+  var otosL = document.getElementById("otosL");
+  otosL.innerHTML = otosL.innerHTML.replace(otosL.innerHTML, otosLotto());
 });
 
 function otosLotto() {
-
   oLotto = [];
   var a = 5;
 
@@ -39,18 +49,36 @@ function otosLotto() {
     }
   }
   console.log(oLotto);
-  return oLotto[0] + "&nbsp;" + oLotto[1] + "   " + oLotto[2] + "   " + oLotto[3] + "   " + oLotto[4];
+  return oLotto[0] + "\xa0\xa0" + oLotto[1] + "\xa0\xa0" + oLotto[2] + "\xa0\xa0" + oLotto[3] + "\xa0\xa0" + oLotto[4];
 }
 
+//hatoslottó
+document.getElementById("hl").addEventListener("click", function() {
+  document.getElementById("hatosL").innerHTML = hatosLotto();
+});
 
 function hatosLotto() {
-  var n1 = Math.floor(Math.random() * 45) + 1;
-  var n2 = Math.floor(Math.random() * 45) + 1;
-  var n3 = Math.floor(Math.random() * 45) + 1;
-  var n4 = Math.floor(Math.random() * 45) + 1;
-  var n5 = Math.floor(Math.random() * 45) + 1;
-  var n6 = Math.floor(Math.random() * 45) + 1;
-  return alert(n1 + " " + n2 + " " + n3 + " " + n4 + " " + n5 + " " + n6);
-}
+  var n = 6;
+  hatosL = [];
 
-//hatosLotto();
+  for (i = 0; i < n; i++) {
+    var a = Math.floor(Math.random() * 45) + 1;
+    if (hatosL.includes(a)) {
+      n++;
+    } else {
+      hatosL.push(a)
+    }
+  }
+  console.log(hatosL);
+
+  /*  function
+    return () {
+      for (i = 0; i < n; i++) {
+        "hatosL[n] + "\
+        xa0\ xa0 " + ";
+      }
+    }
+    return return ();*/
+
+  return hatosL[0] + "\xa0\xa0" + hatosL[1] + "\xa0\xa0" + hatosL[2] + "\xa0\xa0" + hatosL[3] + "\xa0\xa0" + hatosL[4] + "\xa0\xa0" + hatosL[5];
+}
