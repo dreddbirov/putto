@@ -19,7 +19,7 @@ function euroJackpot() {
   }
 
   for (i = 0; i < n2; i++) {
-    var b = Math.floor(Math.random() * 10) + 1;
+    var b = Math.floor(Math.random() * 12) + 1;
     if (ej2.includes(b)) {
       n2++
     } else {
